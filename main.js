@@ -53,7 +53,7 @@ const map = new mapboxgl.Map({
   container: "map", // container ID
   style: "mapbox://styles/elmehdivon/ckxrgmp9xsgym15ns5slmzpgf", // style URL
   center: [106.539127,10.940344], // starting position [lng, lat]
-  zoom: 1, // starting zoom
+  zoom: 16, // starting zoom
 });
 let marker = new mapboxgl.Marker()
   .setLngLat([ 106.539127,10.940344])
