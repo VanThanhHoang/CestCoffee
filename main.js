@@ -25,12 +25,12 @@ menu.addEventListener("click", (e) => {
 
 window.scrollTo(0, 0);
 window.onload = (_) => {
-  preloaderEl.classList.add("closed");
+ 
   document.lastElementChild.style.overflowY = "initial";
   document.getElementById("ladingContent").classList.add("showElements");
   setTimeout((_) => {
     preloaderEl.style.display = "none";
-  }, 1000);
+  }, 1500);
 };
 
 // set up section animation
@@ -53,7 +53,7 @@ const map = new mapboxgl.Map({
   container: "map", // container ID
   style: "mapbox://styles/elmehdivon/ckxrgmp9xsgym15ns5slmzpgf", // style URL
   center: [106.539127,10.940344], // starting position [lng, lat]
-  zoom: 16, // starting zoom
+  zoom: 1, // starting zoom
 });
 let marker = new mapboxgl.Marker()
   .setLngLat([ 106.539127,10.940344])
