@@ -70,33 +70,33 @@
     <div class="home">
       <nav  class="navbar navbar-expand-lg p-1 fixed-top navbar-dark nav-scrolled-text-shadow" id="navToggler">
         <div class="container">
-          <a class="navbar-brand fw-bold" href="index.html">C'est</a>
+          <a class="navbar-brand fw-bold " href="index.html">C'est</a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
           <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ms-auto  fs-4">
               <li class="nav-item m-auto p-3">
-                <a class=" ff-cedarville quote text-green" aria-current="page" href="#home">Liên kết MXH</a>
+                <a class="bold ff-Josefin text-dark fs-700" aria-current="page" href="#main">Liên kết MXH</a>
               </li>
               <li class="nav-item m-auto p-3">
-                <a class=" ff-cedarville quote text-green" href="#main">Giới thiệu</a>
+                <a class="bold ff-Josefin text-dark fs-700" href="#about">Giới thiệu</a>
               </li>
               <li class="nav-item m-auto p-3">
-                <a class=" ff-cedarville quote text-green" href="#gallery">Không gian C'est</a>
+                <a class="bold ff-Josefin text-dark fs-700" href="#gallery">Không gian C'est</a>
               </li>
               <li class="nav-item m-auto p-3">
-                <a class=" ff-cedarville quote text-green" href="#shop">Menu từ C'est</a>
+                <a class="bold ff-Josefin text-dark fs-700" href="#shop">Menu từ C'est</a>
               </li>
               <li class="nav-item m-auto p-3 pe-lg-0">
-                <a class=" ff-cedarville quote text-green" href="#map">Liên hệ C'est</a>
+                <a class="bold ff-Josefin text-dark fs-700" href="#contact">Liên hệ C'est</a>
               </li>
             </ul>
           </div>
         </div>
       </nav>
       <!-- start haeder -->
-      <header id="home"  style="margin-top: 100px;" class="header">
+      <header style="padding-top: 110px;" id="home" class="header">
         <div class="headerContainer flex">
           <div class="logo">
             <img
@@ -244,7 +244,9 @@
     </div>
     <!-- end home -->
     <!-- start about -->
-    <div class="about" id="about">
+
+
+    <div style="padding-top: 110px;"  class="about" id="about">
       <div class="container flex">
         <section class="bg-lightPink grid">
           <svg
@@ -388,7 +390,7 @@
     <!-- start promotion -->
 
     <!-- start shop -->
-    <div class="shop" id="shop">
+    <div style="padding-top: 110px;" class="shop" id="shop">
       <div class="container">
         <header
           style="margin-bottom: 20px; color: #033f2b"
@@ -438,46 +440,45 @@
       }
     </style>
 
-    <div id="map" class="contactFotterShop">
-      <!-- end shop -->
-
-      <!-- start contact -->
-      <div class="contact" id="contact">
-        <div class="container flex">
-          <section class="map-container">
-            <div id="map"></div>
-            <div
-              aria-hidden="true"
-              class="sectionName fs-500 ff-cedarville text-dark rightSide"
-            >
-              Liên hệ
-            </div>
-          </section>
-          <section>
-            <div class="flex infoContainer">
-              <div></div>
-              <div class="contactInfo">
-                <header class="text-dark lt-1 bold fs-600">
-                  <p
-                    class="ff-cedarville quote text-green"
-                    style="font-size: large"
-                  >
-                    Đến với C'est tại
-                  </p>
-                </header>
-
-                <div class="lt-2">
-                  316/4 Tổ 10 <br />
-                  Ấp Đình Xã Tân Phú Trung<br />
-                  Huyện Củ Chi<br />
-                  TP.Hồ Chí Minh
-                </div>
-              </div>
-            </div>
-          </section>
+<div class="contact" id="contact">
+  <div class="container flex">
+     <section class="map-container">
+        <div id="map"></div>
+        <div
+           aria-hidden="true"
+           class="sectionName fs-500 ff-cedarville text-dark rightSide"
+        >
+           Liên hệ C'est
         </div>
-      </div>
-    </div>
+     </section>
+     <section>
+        <div class="flex infoContainer">
+           <div></div>
+           <div class="contactInfo">
+              <header class="text-dark lt-1 bold fs-600">
+                 <p class="ff-cedarville quote text-green " style="font-size: large;">
+             Đến với chúng mình tại
+
+              </header>
+              <div class="lt-2">
+                 316/4 Tổ 10 <br />
+                 Ấp Đình Xã Tân Phú Trung<br />
+                 Huyện Củ Chi<br />
+                 TP.Hồ Chí Minh
+              </div>
+           </div>
+        </div>
+     </section>
+  </div>
+</div>
+</div>
+
+
+
+
+
+
+
     <script src="main.js"></script>
   
     <script>
@@ -640,6 +641,21 @@ function toggleDescription(button) {
   }
 }
       document.addEventListener("DOMContentLoaded", getProduct);
+      const navLinks = document.querySelectorAll('.navbar-nav .nav-item a');
+
+// Add event listener to each nav link
+navLinks.forEach(link => {
+  link.addEventListener('click', () => {
+    // Collapse the navbar when a link is clicked
+    const navbarCollapse = document.getElementById('navbarNav');
+    const navbarToggler = document.querySelector('.navbar-toggler');
+    
+    if (navbarCollapse.classList.contains('show')) {
+      // Close the navbar if it's open
+      navbarToggler.click();
+    }
+  });
+});
     </script>
         <!-- Bootstrap -->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>

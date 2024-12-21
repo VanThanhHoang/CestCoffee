@@ -76,6 +76,7 @@ nav {
 .navbar-brand {
   font-size: 2.5rem !important;
   font-family: "Viga", sans-serif;
+  color: #01402b!important;
 }
 .navbar-nav {
   font-weight: 600;
@@ -105,9 +106,11 @@ nav {
 }
 .nav-scrolled {
   background-color: rgb(240, 240, 240);
-  box-shadow: 0px 2px 15px 3px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 2px 15px 3px rgba(0, 128, 0, 0.5); /* Đổi sang xanh lá đậm mờ */
   transition: all 1.5s;
 }
+
+
 .navbar-brand,
 .nav-item a {
   transition: all 1.5s ease-in;
